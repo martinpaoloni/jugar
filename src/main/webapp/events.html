@@ -1,0 +1,31 @@
+{{<partials/html5}}
+{{$title}}Welcome to the: Java User Group Argentina{{/title}}
+{{$header}}
+<header>
+ <h1>Java User Group Argentina</h1>
+ <h2>Out coming events</h2>
+</header>
+{{/header}}
+{{$content}}
+<table>
+  <thead>
+    <tr>
+      <th><span>Event</span></th>
+      <th><span>Type</span></th>
+      <th><span>Location</span></th>
+      <th><span>Date &amp; Time</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#events}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{type}}</td>
+        <td>{{location}}</td>
+        <td>{{date}}</td>
+      </tr>
+    {{/events}}
+  </tbody>
+</table>
+{{/content}}
+{{/partials/html5}}

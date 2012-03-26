@@ -4,4 +4,4 @@
  > cd modern-web-app  
  > mvn clean install  
 * Wait for a successfull build
-* Follow the steps describe [here](https://github.com/edgarespina/jugar/wiki/Getting-Started)
+* Follow the steps described [here](https://github.com/edgarespina/jugar/wiki/Getting-Started)
