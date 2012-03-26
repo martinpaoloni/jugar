@@ -21,7 +21,8 @@ public class Main extends Startup {
    */
   @Override
   protected Class<?>[] modules() {
-    return new Class<?>[] {JpaModule.class, EventModule.class, ViewModule.class };
+    return new Class<?>[] {JpaModule.class, EventModule.class,
+        ViewModule.class };
   }
 
 }

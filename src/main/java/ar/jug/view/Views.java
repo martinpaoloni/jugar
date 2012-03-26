@@ -37,7 +37,10 @@ public class Views {
   }
 
   /**
-   * Render /events.html
+   * Render /events.html.
+   *
+   * @param criteria The event criteria. Required.
+   * @param model The model object. Required.
    */
   @RequestMapping("/")
   public void events(@Valid final EventCriteria criteria, final Model model) {
