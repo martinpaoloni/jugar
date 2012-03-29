@@ -1,0 +1,56 @@
+{{<partials/html5}}
+{{$title}}Welcome to the: Java UserGroupArgentina{{/title}}
+{{$css}}
+<link href="{{contextPath}}/css/jquery.ui.core.css" rel="stylesheet" type="text/css"/>
+<link href="{{contextPath}}/css/jquery.ui.datepicker.css" rel="stylesheet" type="text/css"/>
+<link href="{{contextPath}}/css/jquery.ui.theme.css" rel="stylesheet" type="text/css"/>
+<link href="{{contextPath}}/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="{{contextPath}}/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
+<link href="{{contextPath}}/css/backbone-forms.css" rel="stylesheet" type="text/css"/>
+{{/css}}
+{{$javascript}}
+<!-- libraries -->
+<script type="text/javascript" src="{{contextPath}}/libs/jquery.js"></script>
+<script type="text/javascript" src="{{contextPath}}/libs/bootstrap.js"></script>
+<script type="text/javascript" src="{{contextPath}}/libs/underscore.js"></script>
+<script type="text/javascript" src="{{contextPath}}/libs/backbone.js"></script>
+<script type="text/javascript" src="{{contextPath}}/libs/mustache.js"></script>
+<!-- jQuery UI -->
+<script type="text/javascript" src="{{contextPath}}/libs/jqueryui/jquery-ui-1.8.18.custom.js"></script>
+<script type="text/javascript" src="{{contextPath}}/libs/jqueryui/jquery.ui.core.js"></script>
+<script type="text/javascript" src="{{contextPath}}/libs/jqueryui/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="{{contextPath}}/libs/jqueryui/jquery.ui.position.js"></script>
+<script type="text/javascript" src="{{contextPath}}/libs/jqueryui/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="{{contextPath}}/libs/jqueryui/jquery.ui.datepicker.js"></script>
+<!-- Backbone forms -->
+<script type="text/javascript" src="{{contextPath}}/libs/backbone-forms/backbone-forms.js"></script>
+<script type="text/javascript" src="{{contextPath}}/libs/backbone-forms/backbone-forms-bootstrap.js"></script>
+<script type="text/javascript" src="{{contextPath}}/libs/backbone-forms/jquery-ui-editors.js"></script>
+<!-- Application -->
+<script type="text/javascript" src="{{contextPath}}/sources/main.js"></script>
+<script type="text/javascript" src="{{contextPath}}/sources/models/event.js"></script>
+<script type="text/javascript" src="{{contextPath}}/sources/models/events.js"></script>
+<script type="text/javascript" src="{{contextPath}}/sources/views/event-row.js"></script>
+<script type="text/javascript" src="{{contextPath}}/sources/views/event-list.js"></script>
+<script type="text/javascript" src="{{contextPath}}/sources/views/event-form.js"></script>
+{{/javascript}}
+{{$content}}
+  {{#partials}}
+  <script type="text/html" id="event-row-tmpl">
+    {{{event-row}}}
+  </script>
+  {{/partials}}
+  <div id="event-list">
+  {{<partials/events}}{{/partials/events}}
+  </div>
+  <div id="event-form">
+    <div id="form"></div>
+    <div id="errors">
+    </div>
+    <div>
+      <button id="save">Save</button>
+      <button id="cancel">Cancel</button>
+    </div>
+  </div>
+{{/content}}
+{{/partials/html5}}

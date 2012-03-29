@@ -43,7 +43,7 @@ public class Views {
    * @param model The model object. Required.
    */
   @RequestMapping("/")
-  public void events(@Valid final EventCriteria criteria, final Model model) {
+  public void main(@Valid final EventCriteria criteria, final Model model) {
     model.addAttribute("events", events.list(criteria));
   }
 }

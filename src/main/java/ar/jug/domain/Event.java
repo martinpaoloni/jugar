@@ -1,12 +1,9 @@
 package ar.jug.domain;
 
 import java.util.Date;
-import java.util.UUID;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
@@ -27,8 +24,7 @@ public class Event {
    * The event's id.
    */
   @Id
-  private String id = IdGenerator.generate(UUID.randomUUID()
-      .getMostSignificantBits());
+  private String id;
 
   /**
    * The event's name.
@@ -39,7 +35,6 @@ public class Event {
   /**
    * The event's type.
    */
-  @ManyToOne(cascade = CascadeType.ALL)
   @NotNull
   private EventType type;
 
@@ -92,6 +87,7 @@ public class Event {
    */
   public void setName(final String name) {
     this.name = name;
+    this.id = IdGenerator.generate(String.valueOf(name).hashCode());
   }
 
   /**
@@ -187,7 +183,7 @@ public class Event {
   public boolean equals(final Object obj) {
     if (obj instanceof Event) {
       Event that = (Event) obj;
-      return Objects.equal(this.name, that.name);
+      return Objects.equal(this.id, that.id);
     }
     return false;
   }

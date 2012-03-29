@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
-
 /**
  * Create, Read, Update and Delete {@link Event} using a REST API.
  *
@@ -27,7 +26,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * @since 0.1
  */
 @Controller
-@RequestMapping("/events")
+@RequestMapping("/api/events")
 @Transactional
 public class Events {
 
@@ -86,6 +85,17 @@ public class Events {
   @ResponseBody
   public Iterable<Event> list(@Valid final EventCriteria criteria) {
     return criteria.execute(em);
+  }
+
+  /**
+   * List all the event types.
+   *
+   * @return All the event types.
+   */
+  @RequestMapping(value = "/types", method = GET)
+  @ResponseBody
+  public EventType[] eventTypes() {
+    return EventType.values();
   }
 
   /**

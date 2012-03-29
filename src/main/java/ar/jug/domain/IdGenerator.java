@@ -30,7 +30,7 @@ public final class IdGenerator {
    */
   public static String generate(final long seed) {
     StringBuilder url = new StringBuilder();
-    BigInteger i = new BigInteger(String.valueOf(seed));
+    BigInteger i = new BigInteger(String.valueOf(Math.abs(seed)));
     while (i.compareTo(BigInteger.ZERO) > 0) {
       url.append(alphabet.charAt(i.mod(base).intValue()));
       i = i.divide(base);
