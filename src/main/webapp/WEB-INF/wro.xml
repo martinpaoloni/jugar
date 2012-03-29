@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups xmlns="http://www.isdc.ro/wro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
+
+  <group name="main">
+    <group-ref>base</group-ref>
+    <group-ref>jquery-ui</group-ref>
+    <group-ref>backbone-forms</group-ref>
+
+    <js>/sources/main.js</js>
+    <js>/sources/models/event.js</js>
+    <js>/sources/models/events.js</js>
+    <js>/sources/views/event-row.js</js>
+    <js>/sources/views/event-list.js</js>
+    <js>/sources/views/event-form.js</js>
+  </group>
+
+  <group name="backbone-forms">
+    <js>/libs/backbone-forms/backbone-forms.js</js>
+    <js>/libs/backbone-forms/backbone-forms-bootstrap.js</js>
+    <js>/libs/backbone-forms/jquery-ui-editors.js</js>
+
+    <css>/css/bootstrap.css</css>
+    <css>/css/bootstrap-responsive.css</css>
+    <css>/css/backbone-forms.css</css>
+  </group>
+
+  <group name="jquery-ui">
+    <js>/libs/jqueryui/jquery-ui-1.8.18.custom.js</js>
+    <js>/libs/jqueryui/jquery.ui.core.js</js>
+    <js>/libs/jqueryui/jquery.ui.mouse.js</js>
+    <js>/libs/jqueryui/jquery.ui.position.js</js>
+    <js>/libs/jqueryui/jquery.ui.widget.js</js>
+    <js>/libs/jqueryui/jquery.ui.datepicker.js</js>
+
+    <css>/css/jquery.ui.core.css</css>
+    <css>/css/jquery.ui.theme.css</css>
+    <css>/css/jquery.ui.datepicker.css</css>
+  </group>
+
+  <group name="base">
+    <js>/libs/jquery.js</js>
+    <js>/libs/bootstrap.js</js>
+    <js>/libs/underscore.js</js>
+    <js>/libs/backbone.js</js>
+    <js>/libs/mustache.js</js>
+  </group>
+</groups>

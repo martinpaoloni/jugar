@@ -4,6 +4,8 @@ import org.apache.commons.lang3.Validate;
 import org.knowhow.mwa.Application;
 import org.knowhow.mwa.view.HtmlTemplates;
 import org.knowhow.mwa.view.mustache.MustacheViewResolver;
+import org.knowhow.mwa.wro4j.CssExporter;
+import org.knowhow.mwa.wro4j.JavaScriptExporter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
@@ -27,7 +29,11 @@ public class ViewModule {
   public ViewResolver viewResolver(final Application app) {
     Validate.notNull(app, "The application is required");
     MustacheViewResolver viewResolver =
-        new MustacheViewResolver(new HtmlTemplates("/partials", "html"));
+        new MustacheViewResolver(
+            new JavaScriptExporter(),
+            new CssExporter(),
+            new HtmlTemplates("/partials", "html")
+        );
     viewResolver.setSuffix(".html");
     viewResolver.setCache(app.mode() != Application.DEV);
     return viewResolver;

@@ -51,6 +51,13 @@
       <version>${mwa-version}</version>
     </dependency>
 
+    <!-- MWA Wro4j -->
+    <dependency>
+      <groupId>org.knowhow</groupId>
+      <artifactId>mwa-wro4j</artifactId>
+      <version>${mwa-version}</version>
+    </dependency>
+
     <!-- H2 for development -->
     <dependency>
       <groupId>com.h2database</groupId>
