@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+
 /**
  * Create, Read, Update and Delete {@link Event} using a REST API.
  *
@@ -26,7 +27,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * @since 0.1
  */
 @Controller
-@RequestMapping("/api/events")
+@RequestMapping("/events")
 @Transactional
 public class Events {
 

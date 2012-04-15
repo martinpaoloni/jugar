@@ -1,22 +1,30 @@
 {{<partials/html5}}
-{{$title}}Welcome to the: Java UserGroupArgentina{{/title}}
+{{$title}}Welcome to the: Java User Group Argentina{{/title}}
 {{$content}}
-  {{#partials}}
-  <script type="text/html" id="event-row-tmpl">
-    {{{event-row}}}
-  </script>
-  {{/partials}}
-  <div id="event-list">
-  {{<partials/events}}{{/partials/events}}
-  </div>
-  <div id="event-form">
-    <div id="form"></div>
-    <div id="errors">
-    </div>
-    <div>
-      <button id="save">Save</button>
-      <button id="cancel">Cancel</button>
-    </div>
-  </div>
+<header>
+ <h1>Java User Group Argentina</h1>
+ <h2>Out coming events</h2>
+ <button id="new">New</button>
+</header>
+<table>
+  <thead>
+    <tr>
+      <th><span>Event</span></th>
+      <th><span>Type</span></th>
+      <th><span>Location</span></th>
+      <th><span>Date &amp; Time</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#events}}
+    <tr>
+      <td>{{name}}</td>
+      <td>{{type}}</td>
+      <td>{{location}}</td>
+      <td>{{date}}</td>
+    </tr>
+    {{/events}}
+  </tbody>
+</table>
 {{/content}}
 {{/partials/html5}}

@@ -1,0 +1,13 @@
+# Configure all the routes
+
+GET       /                views.main
+
+GET       /events          events.list
+
+GET       /events/{id}     events.get
+
+GET       /events/types    events.eventTypes
+
+POST      /people          events.event
+
+DELETE      /people        events.delete

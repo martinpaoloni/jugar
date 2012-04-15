@@ -22,6 +22,8 @@ public class EventModule {
    */
   @Bean
   public JpaConfigurer jpaConfigurer() throws Exception {
-    return new JpaConfigurer(getClass().getPackage());
+    JpaConfigurer configurer = new JpaConfigurer();
+    configurer.addPackage(getClass().getPackage());
+    return configurer;
   }
 }

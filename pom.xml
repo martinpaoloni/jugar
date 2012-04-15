@@ -44,17 +44,17 @@
       <version>${mwa-version}</version>
     </dependency>
 
+    <!-- MWA Validation -->
+    <dependency>
+      <groupId>org.knowhow</groupId>
+      <artifactId>mwa-validation</artifactId>
+      <version>${mwa-version}</version>
+    </dependency>
+
     <!-- MWA View & Mustache View Resolver -->
     <dependency>
       <groupId>org.knowhow</groupId>
       <artifactId>mwa-mustache</artifactId>
-      <version>${mwa-version}</version>
-    </dependency>
-
-    <!-- MWA Wro4j -->
-    <dependency>
-      <groupId>org.knowhow</groupId>
-      <artifactId>mwa-wro4j</artifactId>
       <version>${mwa-version}</version>
     </dependency>
 

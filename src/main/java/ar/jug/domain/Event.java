@@ -3,6 +3,8 @@ package ar.jug.domain;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -24,7 +26,8 @@ public class Event {
    * The event's id.
    */
   @Id
-  private String id;
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
 
   /**
    * The event's name.
@@ -87,7 +90,6 @@ public class Event {
    */
   public void setName(final String name) {
     this.name = name;
-    this.id = IdGenerator.generate(String.valueOf(name).hashCode());
   }
 
   /**
@@ -95,7 +97,7 @@ public class Event {
    *
    * @return The event's id.
    */
-  public String getId() {
+  public Long getId() {
     return id;
   }
 
